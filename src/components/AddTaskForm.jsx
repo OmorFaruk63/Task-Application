@@ -7,7 +7,12 @@ const AddTaskForm = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input autoFocus placeholder="Enter your task here" type="text" />
+        <input
+          required
+          autoFocus
+          placeholder="Enter your task here"
+          type="text"
+        />
         <input type="submit" value="ADD_TASK" />
       </form>
     </div>
