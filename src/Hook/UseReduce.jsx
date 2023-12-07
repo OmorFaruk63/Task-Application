@@ -9,19 +9,15 @@ const UseReduce = ({ children }) => {
     tasks: [],
   };
 
-  const [taskState, dispatch] = useReducer(reducer, initialState);
+  const [taskState, dispatch] = useReducer(
+    reducer,
+    JSON.parse(localStorage.getItem("task")) || initialState
+  );
 
-  // useEffect(() => {
-  //   const data = JSON.parse(localStorage.getItem("task")) ?? initialState;
-  //   dispatch({ type: "SET_TASKS", payload: data.tasks });
-  // }, []);
+  useEffect(() => {
+    localStorage.setItem("task", JSON.stringify(taskState));
+  }, [taskState]);
 
-  // function oldItem() {
-  //   return JSON.parse(localStorage.getItem("task")) ?? initialState;
-  // }
-  // console.log(taskState);
-  // // SetItem In LocalStorage
-  // localStorage.setItem("task", JSON.stringify(taskState));
 
   //Form Submit
   function handleSubmit(e) {
