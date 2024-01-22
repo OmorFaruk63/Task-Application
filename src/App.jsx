@@ -6,7 +6,7 @@ import TaskList from "./components/TaskList";
 const App = () => {
   return (
     <div className="body">
-      <h1>Task Management Application</h1>
+      <h1>Swift Task Application</h1>
       <UseReduce>
         <div className="task-container">
           <AddTaskForm />
