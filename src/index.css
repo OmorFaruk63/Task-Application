@@ -6,7 +6,7 @@
 .body {
   max-width: 100vw;
   height: 100vh;
-  background: rgb(255, 175, 206);
+  background: rgb(175, 240, 255);
   background: linear-gradient(
     90deg,
     rgba(255, 175, 206, 1) 0%,
